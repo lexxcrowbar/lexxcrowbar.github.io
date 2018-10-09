@@ -20,6 +20,19 @@ body {
   font-size:12px
 }
 
+input[type=text] {
+    background-color: #ffdb3d;
+    color: #333;
+    border: 2px solid #ddb91d;
+    padding: 5px 0px;
+}
+
+input[type=text]:focus {
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #ddb91d;
+}
+
 button {
     background-color: #ffdb3d;
     border: 2px solid #ddb91d;
