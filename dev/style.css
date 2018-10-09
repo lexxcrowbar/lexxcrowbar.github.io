@@ -21,9 +21,8 @@ body {
 }
 
 input[type=text] {
-    background-color: #ffdb3d;
+    background-color: #dcd1a3;
     color: #333;
-    border: 2px solid #ddb91d;
     higth:70px;
     width:200px;
     font-family:Inconsolata,monospace;
