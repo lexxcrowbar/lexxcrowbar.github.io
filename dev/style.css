@@ -73,6 +73,10 @@ a:active,a:hover{
   color:#11a0c4
   }
 
+.textfeld-msg {
+  font-size:16px;
+}
+
 .bf {
   font-size:12px;
 }
