@@ -12,8 +12,8 @@ body {
 
 body {
   font-family:Inconsolata,monospace;
-  font-size:20px,
-  top: 20px;
+  font-size:20px;
+  padding-top: 20px;
 }
 
 .discl {
