@@ -1,0 +1,150 @@
+Toiletten.html
+Last month
+17 Sep.
+You edited an item
+HTML
+Toiletten.html
+14 Sep.
+You created an item in
+My Drive
+Created items:
+HTML
+Toiletten.html
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Toiletten-Berechnung</title>
+  </head>
+  <body>
+    <p>Alle Angaben ohne Gewähr!</p>
+    <p>Erstellt am 14.09.2018 von Fabian Urner</p>
+
+
+
+<h2>Toilettenberechnung für Veranstaltungen</h2>
+	<div class="formitem">
+		<label><input placeholder="Personenanzahl" type="text" name="anzahl" id="anzahl"></label>
+		<label><button id="textfeld" type="button"> berechnen </button></label>
+	</div>
+	<div class="textfeld-msg"></div>
+	<div class="DamenWC"></div>
+	<div class="HerrenWC"></div>
+	<div class="HerrenUrinal"></div>
+
+<script>
+document.querySelector('#textfeld').onclick = function () {
+	 //----- Konstanten -------
+  var personenAnzahl = document.querySelector("#anzahl").value;  
+  //Damen
+  var ladyTill100 = 3;
+  var ladyMoreThan100 = 1.2;
+  var ladyMoreThan1000 = 0.9;
+  var ladyMoreThan20000 = 0.6;
+  
+  //Herren WC
+  var gentWCTill100 = 1;
+  var gentWCMoreThan100 = 0.4;
+  var gentWCMoreThan1000 = 0.3;
+  var gentWCMoreThan20000 = 0.2;
+  
+  //Herren Urinal
+  var gentUriTill100 = 2;
+  var gentUriMoreThan100 = 0.8;
+  var gentUriMoreThan1000 = 0.6;
+  var gentUriMoreThan20000 = 0.4;
+  
+  //----- Ergebnisse --------
+  var damenWC;
+  var herrenWC;
+  var herrenUrinal;
+ 
+ 
+  
+if (personenAnzahl > 20000 ) {
+  
+  var tempFaktor = (personenAnzahl-20000)/100;
+  if (tempFaktor-Math.floor(tempFaktor)>0){
+    tempFaktor=Math.floor(tempFaktor) + 1;
+  }
+  
+  //Damen
+  damenWC = ladyTill100+Math.ceil(9*ladyMoreThan100)+Math.ceil(190*ladyMoreThan1000)+Math.ceil(tempFaktor*ladyMoreThan20000);
+  
+  //Herren WC
+  herrenWC = gentWCTill100+Math.ceil(9*gentWCMoreThan100)+Math.ceil(190*gentWCMoreThan1000)+Math.ceil(tempFaktor*gentWCMoreThan20000);
+  
+  //Herren Urinal
+  herrenUrinal = gentUriTill100+Math.ceil(9*gentUriMoreThan100)+Math.ceil(190*gentUriMoreThan1000)+Math.ceil(tempFaktor*gentUriMoreThan20000);
+}
+  else if (personenAnzahl > 1000 ) {
+    
+    var tempFaktor = (personenAnzahl-1000)/100;
+    if (tempFaktor-Math.floor(tempFaktor)>0){
+      tempFaktor=Math.floor(tempFaktor) + 1;
+    }
+    
+    //Damen
+    damenWC = ladyTill100+Math.ceil(9*ladyMoreThan100)+Math.ceil(tempFaktor*ladyMoreThan1000);
+    
+    //Herren WC
+    herrenWC = gentWCTill100+Math.ceil(9*gentWCMoreThan100)+Math.ceil(tempFaktor*gentWCMoreThan1000);
+    
+    //Herren Urinal
+    herrenUrinal = gentUriTill100+Math.ceil(9*gentUriMoreThan100)+Math.ceil(tempFaktor*gentUriMoreThan1000);
+  }
+  else if (personenAnzahl > 100){
+    
+    var tempFaktor = (personenAnzahl-100)/100;
+    if (tempFaktor-Math.floor(tempFaktor)>0){
+      tempFaktor=Math.floor(tempFaktor) + 1;
+    }
+    
+    //Damen
+    damenWC = ladyTill100+Math.ceil(tempFaktor*ladyMoreThan100);
+    
+    //Herren WC
+    herrenWC = gentWCTill100+Math.ceil(tempFaktor*gentWCMoreThan100);
+    
+    //Herren Urinal
+    herrenUrinal = gentUriTill100+Math.ceil(tempFaktor*gentUriMoreThan100);
+  }
+  else if (personenAnzahl > 0){
+    
+    //Damen
+    damenWC = ladyTill100;
+    
+    //Herren WC
+    herrenWC = gentWCTill100;
+    
+    //Herren Urinal
+    herrenUrinal = gentUriTill100;
+    
+  }  
+  
+  
+  if (personenAnzahl >0){
+    document.querySelector('.textfeld-msg').innerHTML = "Nach §12 MVStättVO sind Toiletten in folgender Anzahl nötig:\n\nDamen: "+damenWC+"\nHerren-WC: "+herrenWC+"\nHerren-Urinal: "+herrenUrinal;
+    document.querySelector('.DamenWC').innerHTML = "Damen-WV: "+damenWC;
+    document.querySelector('.HerrenWC').innerHTML = "Herrne-WC: "+herrenWC;
+    document.querySelector('.HerrenUrinal').innerHTML = "Herren-Urinal: "+herrenUrinal;
+    
+      
+  }
+  else if (personenAnzahl == 0)
+  {
+    alert("dein Ernst? Ohne Besucher brauchst du auch nix zum reinpissen!");
+  }
+  else
+  {
+    alert("ungültiger Wert");
+  }
+	
+	
+	
+	
+	}
+</script>
+
+  </body>
+</html>
