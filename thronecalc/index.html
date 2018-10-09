@@ -6,10 +6,7 @@
     <title>Toiletten-Berechnung</title>
   </head>
   <body>
-    <p><div class="discl">Alle Angaben ohne Gewähr! // Erstellt im Okt 2018 von <a href="mailto:fabian.urner@gmail.com">Fabian Urner</a></div></p>
-
-
-
+  
 <h2>Toilettenberechnung für Veranstaltungen</h2>
 	<div class="formitem">
 		<label><input placeholder="Personenanzahl" type="text" name="anzahl" id="anzahl"></label>
@@ -19,6 +16,7 @@
 	<p><div class="DamenWC"></div></p>
 	<p><div class="HerrenWC"></div></p>
 	<p><div class="HerrenUrinal"></div></p>
+	<p><div class="bf"></div></p>
 
 <script>
 document.querySelector('#textfeld').onclick = function () {
@@ -44,7 +42,9 @@ document.querySelector('#textfeld').onclick = function () {
   
   //----- Ergebnisse --------
   var damenWC;
+  var damenBF;
   var herrenWC;
+  var herrenBF;
   var herrenUrinal;
  
  
@@ -112,10 +112,14 @@ if (personenAnzahl > 20000 ) {
   
   
   if (personenAnzahl >0){
-    document.querySelector('.textfeld-msg').innerHTML = "Es werden nach MVStättVO folgende Anzahlen an Toiletten benötigt: ";
-    document.querySelector('.DamenWC').innerHTML = "Damen-WC: "+damenWC;
-    document.querySelector('.HerrenWC').innerHTML = "Herren-WC: "+herrenWC;
-    document.querySelector('.HerrenUrinal').innerHTML = "Herren-Urinal: "+herrenUrinal;
+	  
+    damenBF = Math.ceil(damenWC/12);
+    herrenBF = Math.ceil(herrenWC/12);
+    document.querySelector('.textfeld-msg').innerHTML = "Es werden nach MVStättVO (07/2014) folgende Anzahlen an Toiletten benötigt: ";
+    document.querySelector('.DamenWC').innerHTML = "Damen-WC: <strong class=\"marker\">"+damenWC + "</strong> (BF*: " + damenBF + ")";
+    document.querySelector('.HerrenWC').innerHTML = "Herren-WC: <strong class=\"marker\">"+herrenWC + "</strong> (BF* " + herrenBF + ")";
+    document.querySelector('.HerrenUrinal').innerHTML = "Herren-Urinal: <strong class=\"marker\">"+herrenUrinal + "</strong>";
+    document.querySelector('.bf').innerHTML = "* Anteil an barrierefreien Toiletten.";
     
       
   }
@@ -128,10 +132,13 @@ if (personenAnzahl > 20000 ) {
     alert("ungültiger Wert");
   }
 	
-
 	
 	}
 </script>
-
+	
+	<div class="footer">
+	  	<p>Gebastelt mit ♥ und 💩 von <a href="mailto:fabian.urner@gmail.com">Fabi</a></p>
+		<p>Die Zahlen nach MVStättVO (07/2014) gelten nicht in jedem Bundesland! | Alle Angaben ohne Gewähr | näheres Infos zur <a href="https://de.wikipedia.org/wiki/Versammlungsst%C3%A4ttenverordnung">MVStättVO</a></p>
+	</div>
   </body>
 </html>
