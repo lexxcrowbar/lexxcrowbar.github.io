@@ -15,6 +15,10 @@ body {
   font-size:20px
 }
 
+h2 {
+  top: 20px;
+}
+
 .discl {
   font-size:12px
 }
