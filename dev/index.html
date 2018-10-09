@@ -41,7 +41,9 @@ document.querySelector('#textfeld').onclick = function () {
   
   //----- Ergebnisse --------
   var damenWC;
+  var damenBF;
   var herrenWC;
+  var herrenBF;
   var herrenUrinal;
  
  
@@ -109,9 +111,12 @@ if (personenAnzahl > 20000 ) {
   
   
   if (personenAnzahl >0){
+	  
+    damenBF = Math.ceil(damenWC/12);
+    herrenBF = Math.ceil(herrenWC/12);
     document.querySelector('.textfeld-msg').innerHTML = "Es werden nach MVStättVO folgende Anzahlen an Toiletten benötigt: ";
-    document.querySelector('.DamenWC').innerHTML = "Damen-WC: "+damenWC;
-    document.querySelector('.HerrenWC').innerHTML = "Herren-WC: "+herrenWC;
+    document.querySelector('.DamenWC').innerHTML = "Damen-WC: "+damenWC + "(davon min. " + damenBF + " barrierefrei)";
+    document.querySelector('.HerrenWC').innerHTML = "Herren-WC: "+herrenWC + "(davon min. " + herrenBF + " barrierefrei)";
     document.querySelector('.HerrenUrinal').innerHTML = "Herren-Urinal: "+herrenUrinal;
     
       
