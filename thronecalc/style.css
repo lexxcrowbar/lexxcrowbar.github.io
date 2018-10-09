@@ -12,19 +12,78 @@ body {
 
 body {
   font-family:Inconsolata,monospace;
-  font-size:20px
+  font-size:20px;
+  padding-top: 20px;
 }
 
 .discl {
   font-size:12px
 }
 
+input[type=text] {
+    background-color: #dcd1a3;
+    color: #333;
+    border: none;
+    border-bottom: 2px solid #ddb91d;
+    height:35px;
+    width:200px;
+    font-family:Inconsolata,monospace;
+    font-size: 16px;
+}
+
+input[type=text]:focus {
+    background-color: #fff;
+    color: #333;
+}
+
+button {
+    background-color: #ffdb3d;
+    border: 2px solid #ddb91d;
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    height:35px;
+    padding: 5px 24px;
+    font-family:Inconsolata,monospace;
+    font-size: 16px;
+}
+
+button:hover{
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  background-color:#ddb91d;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    font-size:12px;
+}
 
 a,a:visited {
-  color:#999
+  color:#ffdb3d
 }
 a:active,a:hover{
   color:#11a0c4
   }
+
+.marker {
+  background-color:#333;
+  color:#fff;
+}
+
+.textfeld-msg{
+  font-size:16px;
+}
+
+.bf {
+  font-size:12px;
+}
 
 
