@@ -23,7 +23,8 @@ body {
 input[type=text] {
     background-color: #dcd1a3;
     color: #333;
-     border-bottom: 2px solid #ddb91d;
+    border: none;
+    border-bottom: 2px solid #ddb91d;
     hight:70px;
     width:200px;
     font-family:Inconsolata,monospace;
@@ -33,7 +34,6 @@ input[type=text] {
 input[type=text]:focus {
     background-color: #fff;
     color: #333;
-    border: 2px solid #ddb91d;
 }
 
 button {
