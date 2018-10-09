@@ -21,12 +21,13 @@ body {
 }
 
 button {
-    background-color: white;
+    background-color: #ffdb3d;
     border: 2px solid #ddb91d;
-    color: black;
+    color: #333;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    padding: 10px 24px;
     font-family:Inconsolata,monospace;
     font-size: 16px;
 }
