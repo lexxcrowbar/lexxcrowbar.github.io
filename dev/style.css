@@ -1,0 +1,30 @@
+
+
+body {
+  margin:0;
+  padding:0;
+  font-family:sans-serif;
+  text-align:center;
+  color:#333;
+  background-color:#ffdb3d;
+  
+  }
+
+body {
+  font-family:Inconsolata,monospace;
+  font-size:20px
+}
+
+.discl {
+  font-size:12px
+}
+
+
+a,a:visited {
+  color:#999
+}
+a:active,a:hover{
+  color:#11a0c4
+  }
+
+
