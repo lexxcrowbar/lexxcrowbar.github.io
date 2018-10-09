@@ -73,21 +73,11 @@ a:active,a:hover{
   color:#11a0c4
   }
 
-.DamenWC {
-  background-color:white;
+.marker {
+  background-color:#333;
+  color:#fff;
 }
 
-.HerrenWC {
-  background-color:white;
-}
-
-.HerrenUrinal {
-  background-color:white;
-}
-
-.textfeld-msg {
-  font-size:16px;
-}
 
 .bf {
   font-size:12px;
