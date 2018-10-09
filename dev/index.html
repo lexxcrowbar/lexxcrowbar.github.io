@@ -116,9 +116,9 @@ if (personenAnzahl > 20000 ) {
     damenBF = Math.ceil(damenWC/12);
     herrenBF = Math.ceil(herrenWC/12);
     document.querySelector('.textfeld-msg').innerHTML = "Es werden nach MVStättVO (07/2014) folgende Anzahlen an Toiletten benötigt: ";
-    document.querySelector('.DamenWC').innerHTML = "<strong class=\"marker\">Damen-WC: "+damenWC + "</strong> (BF*: " + damenBF + ")";
-    document.querySelector('.HerrenWC').innerHTML = "Herren-WC: "+herrenWC + " (BF* " + herrenBF + ")";
-    document.querySelector('.HerrenUrinal').innerHTML = "Herren-Urinal: "+herrenUrinal;
+    document.querySelector('.DamenWC').innerHTML = "Damen-WC: <strong class=\"marker\">"+damenWC + "</strong> (BF*: " + damenBF + ")";
+    document.querySelector('.HerrenWC').innerHTML = "Herren-WC: <strong class=\"marker\">"+herrenWC + "</strong> (BF* " + herrenBF + ")";
+    document.querySelector('.HerrenUrinal').innerHTML = "Herren-Urinal: <strong class=\"marker\">"+herrenUrinal + "</strong>";
     document.querySelector('.bf').innerHTML = "* Anteil der Gesamtanzahl an barrierefreien Toiletten.";
     
       
