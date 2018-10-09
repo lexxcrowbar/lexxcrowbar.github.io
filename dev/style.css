@@ -25,6 +25,8 @@ input[type=text] {
     color: #333;
     border: 2px solid #ddb91d;
     padding: 5px 0px;
+    font-family:Inconsolata,monospace;
+    font-size: 16px;
 }
 
 input[type=text]:focus {
