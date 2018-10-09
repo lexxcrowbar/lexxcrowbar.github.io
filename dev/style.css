@@ -20,7 +20,7 @@ body {
   font-size:12px
 }
 
-.button {
+button {
     background-color: #ff993d; /* Green */
     border: none;
     color: black;
@@ -39,8 +39,7 @@ body {
     width: 100%;
     background-color: #333;
     color: white;
-    text-align: right;
-    padding-right:20px;
+    text-align: center;
     font-size:12px;
 }
 
